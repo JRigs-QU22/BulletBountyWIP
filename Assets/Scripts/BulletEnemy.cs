@@ -29,11 +29,15 @@ public class BulletEnemy : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "Enemy") //if alien is hit by object with bottom tag
+        if (collision.gameObject.tag == "Enemy") //if bullet is hit by object with enemy tag
         {
             Destroy(gameObject); //destroy object immeadiately
         }
-        else if (collision.gameObject.tag == "Player") //if alien is hit by object with bottom tag
+        else if (collision.gameObject.tag == "Player") //if bullet is hit by object with player tag
+        {
+            Destroy(gameObject); //destroy object immeadiately
+        }
+        else if (collision.gameObject.tag == "Prop") //if bullet is hit by object with prop tag
         {
             Destroy(gameObject); //destroy object immeadiately
         }

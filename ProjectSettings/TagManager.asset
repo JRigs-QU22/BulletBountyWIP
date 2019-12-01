@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - Found
   - EBullet
+  - Prop
+  - Fall
+  - Top
+  - Grounded
   layers:
   - Default
   - TransparentFX

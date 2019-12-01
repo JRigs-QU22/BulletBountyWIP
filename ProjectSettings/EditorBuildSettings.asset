@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_OverWorld.unity
     guid: 8936e3c63eb07224f9aaef0a39931e67
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene_Level1.unity
     guid: 5c8bdac439a509e4aac5cebebb5de958
   - enabled: 1
@@ -26,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_Lose.unity
     guid: 97e293704eee5b4469e8e43885ab0429
+  - enabled: 1
+    path: Assets/Scenes/Level_Final.unity
+    guid: 330866bb1615fc940b1127b51e5e6e3b
+  - enabled: 1
+    path: Assets/Scenes/Final_OverWorld.unity
+    guid: e67d24e161065e840ba78a38fb7fa85a
+  - enabled: 1
+    path: Assets/Scenes/Scene_Credits.unity
+    guid: df15fc5daf81aed448554160524f5966
+  - enabled: 1
+    path: Assets/Scenes/Scene_End.unity
+    guid: f0c64b389ac77d2459a0689ec261a6d0
+  - enabled: 1
+    path: Assets/Scenes/Scene_Controls.unity
+    guid: d8460a88edc52d5459c07af53c5f5ae7
   m_configObjects: {}

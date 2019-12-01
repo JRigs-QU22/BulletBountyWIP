@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
 
     public Quaternion blastRot; // Saves the transform.rotation to a variable
 
+    int Ammo = 1; //sets player to have one shot
+
     void Start()
     {
 
@@ -19,19 +21,24 @@ public class Gun : MonoBehaviour
     void Update()
     {
 
-        var objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        var objectPos = Camera.main.WorldToScreenPoint(transform.position); //sets camera position for gun
 
-        var dir = Input.mousePosition - objectPos;
+        var dir = Input.mousePosition - objectPos; //controls the direction of the shot
 
 
-        blastRot = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
+        blastRot = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg)); //Calculates the rotation of shot based on mouse position
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        { //if space button is press
+        if (Input.GetKeyDown(KeyCode.Mouse0))// on left click
+        { 
             myLocation = gameObject.transform.position; //sets blast location at player position
 
             Instantiate(blast, new Vector2(myLocation.x, myLocation.y), blastRot); //makes new blast in blastRot direction
+
+            Ammo --; //subtract one ammo
+            if (Ammo < 1) { //after shot, disable gun script
+                gameObject.GetComponent<Gun>().enabled = false; //disable gun script
+            }
         }
     }
-}//Based on code provided by Liam Day
+}//Based on code provided by Liam Day and rotation provided by Matt D on Discord
 

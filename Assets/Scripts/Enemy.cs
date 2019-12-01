@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public int score;
-    public Text TellPlay;
+    public Text TellPlay; //provides slot for text
+    public GameObject Enemies; //provides slot to insert enemies
+    public int score; //sets int for score;
+   // public Text TellPlay;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -22,11 +24,12 @@ public class Enemy : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "Bullet") //if alien is hit by object with bottom tag
+        if (collision.gameObject.tag == "Bullet") //if enemy is hit by bullet...
         {
-            score += 10;
-            TellPlay.text = "Score: $" + score;
-            Destroy(gameObject); //destroy object immeadiately
+            score ++; //increase score by one
+            TellPlay.text = "Money Earned: $" + score; //update text field with score
+            Destroy(Enemies); //destroy object immeadiately
+            Debug.Log("Kill"); //send kill message to console
         }
     }
 }

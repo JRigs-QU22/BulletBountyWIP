@@ -21,7 +21,7 @@ public class EnemyShoot : MonoBehaviour
 
     void Fire()
     {
-        var Shot = Random.Range(1, 4);
+        var Shot = Random.Range(1, 4); //sets range for enemy shooting
         if (Shot == 2 || Shot == 4) //if space button is pressed
         {
             myLocation = gameObject.transform.position; //sets blast location at player position

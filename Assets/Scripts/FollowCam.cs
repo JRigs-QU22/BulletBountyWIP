@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FollowCam : MonoBehaviour
 {
-    public GameObject player;
-    private Vector3 offset;
+    public GameObject player; //provides slot to insert player
+    private Vector3 offset; //creates offset variable for camera position relative to player
     // Start is called before the first frame update
     void Start()
     {
-        offset = (transform.position - player.transform.position) * 5;
+        offset = (transform.position - player.transform.position) * 5; //sets offset of camera
     }
 
     // Update is called once per frame
